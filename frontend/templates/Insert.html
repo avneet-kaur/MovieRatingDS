@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+
+  *{
+    padding:0px;
+	margin:0px;
+	box-sizing:border-box;
+	}
+
+ ul {
+ 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #9400D3;
+  
+  }
+
+ li {
+ 
+    float: left;
+	width:16%;
+  }
+
+ li a {
+ 
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+	font-size:130%;
+  }
+
+ li a:hover:not(.active) {
+     background-color: #111;
+  }
+
+ .active {
+   background-color: #4CAF50;
+ } 
+
+ body{
+    
+    background-image:url({{ url_for('static', filename='mongo.jfif') }});
+	height:100%
+	
+	background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+	z-index:0;
+  
+
+ }
+
+ .input-1{
+  
+    height: 100%;  
+	position: absolute; 
+	left: 22%; 
+	top: 20%; 
+	width: 50%; 
+	height: 45%; 
+ 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+	border-radius:25px;
+	background-color:#ffffff00;
+	z-index:1;
+ 
+ }
+ 
+ .submit-name{
+
+    background-color: #00FF00 ;
+    position:relative;	
+	height:15% ; 
+	width:35% ; 
+	top:60%; 
+	left:-25% ; 
+	border-radius:30px ;
+	font-size:80%
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover 
+ 
+ }
+ 
+   .msg{
+    position:absolute;
+	left:39%;
+	top:20%;
+	width:17%
+	height:4%;
+	font-size:170%;
+	color:yellow;
+ 
+ }
+ 
+   .movie-name{
+    position:relative ;
+	width: 60%; 
+	height: 17%; 
+	top:10%; 
+	left:25% ; 
+	font-size:150%;  
+  }
+  
+  .ID{
+    position:relative ;
+	width: 60%; 
+	height: 17%; 
+	top:15%; 
+	left:25% ; 
+	font-size:150%;
+  }
+  
+  .user{
+    position:relative ;
+	width: 60%; 
+	height: 17%; 
+	top:20%; 
+	left:25% ; 
+	font-size:150%;}
+  
+  .id{
+    position:relative ;
+	width: 60%; 
+	height: 17%; 
+	top:25%; 
+	left:25% ; 
+	font-size:150%;
+  }
+  
+  .time{
+    position:relative ;
+    width: 60%; 
+    height: 17%; 
+    top:30%; 
+    left:25% ; 
+    font-size:150%;
+  }
+ 
+ @media screen and (max-width: 870px){ 
+ 
+   *{
+    padding:0px;
+	margin:0px;
+	box-sizing:border-box;
+	}
+
+ ul {
+ 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #9400D3;
+  
+  }
+
+ li {
+ 
+    float: left;
+	width:100%;
+  }
+
+ li a {
+ 
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font-size:130%;
+  }
+
+ li a:hover:not(.active) {
+     background-color: #111;
+  }
+
+ .active {
+   background-color: #4CAF50;
+ } 
+ 
+  .msg{
+    position:absolute;
+	left:30%;
+	top:30%;
+	width:35%
+	height:5%;
+	font-size:160%;
+	color:black;
+ 
+ }
+  .input-1{
+ 
+    height: 100%;
+    top : 45%;
+	
+	
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+	border-radius:25px;
+	z-index:1;
+ 
+ }
+ 
+   .submit-name{
+ 
+    background-color: #00FF00 ;
+    position:absolute;	
+	height:5% ; 
+	width:35% ; 
+	top:50%; 
+	left:37% ; 
+	border-radius:30px ;
+	font-size:80%
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+ 
+ 
+ }
+ 
+  .movie-name{
+    position:relative ;
+	width: 60%; 
+	height: 5%; 
+	top:0%; 
+	left:25% ; 
+	font-size:80%;  
+  }
+  
+  .ID{
+    position:relative ;
+	width: 60%; 
+	height: 5%; 
+	top:5%; 
+	left:25% ; 
+	font-size:80%;
+  }
+  
+  .user{
+    position:relative ;
+	width: 60%; 
+	height: 5%; 
+	top:10%; 
+	left:25% ; 
+	font-size:80%;}
+  
+  .id{
+    position:relative ;
+	width: 60%; 
+	height: 5%; 
+	top:15%; 
+	left:25% ; 
+	font-size:80%;
+  }
+  
+  .time{
+    position:relative ;
+    width: 60%; 
+    height: 5%; 
+    top:20%; 
+    left:25% ; 
+    font-size:80%;
+  }
+  
+  input[type=submit] {
+    font-size: 80%;
+  }
+ 
+ }
+
+</style>
+<title>Insert Query</title>
+</head>
+<body >
+<ul>
+  <li><a class="active" href="{{url_for('home')}}">Home</a></li>
+  <li><a href="{{url_for('ML')}}">Find Movies</a></li>
+  <li><a href="{{url_for('Search')}}">Search Movies</a></li>
+  <li><a href="{{url_for('Insert')}}">Insert Movies</a></li>
+  <li><a href="{{url_for('Update')}}">Update Movies</a></li>
+  <li><a href="{{url_for('Delete')}}">Delete Movies</a></li>
+</ul>
+<h5 style = "text-align: center ; font-size:185% ;color:#FFFFFF";>INSERT THE MOVIE INFO</h5>
+<br>
+<br>
+<form action="{{url_for('insert')}}" method="post" target="_blank">
+<div class="input-1">
+<input class="movie-name" name="MovieName" type="text" method="POST" placeholder="Movie Name" >
+<input class="ID" name="ID" type="number"  method="POST" placeholder="ID" >
+<input class="user" name="User ID" type="number"  method="POST" placeholder="User ID" >
+<input class="id" name="Movie ID" type="number"  method="POST" placeholder="Movie ID" >
+<input class="time" name="Time Stamp" type="datetime-local" method="POST" placeholder="Time Stamp" >
+<input  class = "submit-name" value="INSERT" type="submit" ></input>
+</div>
+</form>
+</body>
+</html>

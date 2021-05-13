@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<head>
+<style> 
+*{
+    padding:0px;
+	margin:0px;
+	box-sizing:border-box;
+	}
+
+ ul {
+ 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #9400D3;
+  
+  }
+
+ li {
+ 
+    float: left;
+	width:16%;
+  }
+
+ li a {
+ 
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+	font-size:130%;
+  }
+
+ li a:hover:not(.active) {
+     background-color: #111;
+  }
+
+ .active {
+   background-color: #4CAF50;
+ } 
+ 
+ @media screen and (max-width: 870px){ 
+ 
+   *{
+    padding:0px;
+	margin:0px;
+	box-sizing:border-box;
+	}
+
+ ul {
+ 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #9400D3;
+  
+  }
+
+ li {
+ 
+    float: left;
+	width:100%;
+  }
+
+ li a {
+ 
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font-size:130%;
+  }
+
+ li a:hover:not(.active) {
+     background-color: #111;
+  }
+
+ .active {
+   background-color: #4CAF50;
+ } 
+   .msg{
+    position:absolute;
+	left:30%;
+	top:50%;
+	width:35%
+	height:20%;
+	font-size:200%;
+	color:black;
+ 
+ }
+ 
+ }
+</style>
+<title>Response</title>
+</head>
+<body >
+<ul>
+  <li><a class="active" href="{{url_for('home')}}">Home</a></li>
+  <li><a href="{{url_for('ML')}}">Find Movies</a></li>
+  <li><a href="{{url_for('Search')}}">Search Movies</a></li>
+  <li><a href="{{url_for('Insert')}}">Insert Movies</a></li>
+  <li><a href="{{url_for('Update')}}">Update Movies</a></li>
+  <li><a href="{{url_for('Delete')}}">Delete Movies</a></li>
+</ul>
+<div class="msg">
+{% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+                    <center><h1><b>{{ message }}</b></h1></center>  
+               {% endfor %}  
+         {% endif %}  
+{% endwith %}
+</div>
+</body>
+</html>
